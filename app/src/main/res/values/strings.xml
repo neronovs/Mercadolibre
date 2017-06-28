@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Mercadolibre</string>
+    <string name="meli_app_id">8043933050771217</string>
+    <string name="meli_redirect_uri">https://api.mercadolibre.com/</string>
+    <string name="items_main_string">items/</string>
+    <string name="search_main_string">sites/MLU/search?q=</string>
+    <string name="simple_online_catalogue">Mercado Libre catalog</string>
+    <string name="input_the_item_you_re_looking_for">Input what you\'re looking for…</string>
+    <string name="let_s_search">Let\'s search!</string>
+    <string name="no_description">No description</string>
+    <string name="search">search</string>
+    <string name="history">history</string>
+    <string name="no_result_of_searching">There is no items for your request</string>
+</resources>

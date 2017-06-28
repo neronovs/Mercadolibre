@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="5dp"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_marginTop="5dp"
+    android:background="@mipmap/background"
+    android:orientation="vertical"
+    tools:context="ru.narod.nod.catalogue.ViewControllers.SimpleItemController">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageView
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:background="@mipmap/fragm_number" />
+
+                <TextView
+                    android:id="@+id/detail_tvNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detail_tvNumber"
+                    android:textAlignment="center"
+                    android:textColor="@color/DarkBlue"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <!--<ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@mipmap/fragm_title" />-->
+
+                <TextView
+                    android:id="@+id/detail_tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detail_tvTitle"
+                    android:textAlignment="center"
+                    android:textColor="@color/Red"
+                    android:textSize="26sp" />
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="400dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/detail_tempImageWhiteBlank"
+                            android:layout_width="400dp"
+                            android:layout_height="400dp"
+                            android:layout_gravity="center"
+                            android:background="@color/White"/>
+
+                        <ImageView
+                            android:id="@+id/detail_tempImageNoPhoto"
+                            android:layout_width="@android:dimen/thumbnail_height"
+                            android:layout_height="@android:dimen/thumbnail_height"
+                            android:layout_gravity="center"
+                            android:background="@mipmap/no_photo" />
+
+                        <ProgressBar
+                            android:id="@+id/simple_progress_bar"
+                            android:layout_width="110dp"
+                            android:layout_height="110dp"
+                            android:layout_gravity="center"
+                            android:layout_margin="10dp"
+                            android:indeterminate="true"
+                            android:indeterminateDrawable="@drawable/spinner_ring"
+                            android:indeterminateOnly="true"
+                            android:visibility="visible"/>
+                    </FrameLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/detail_ll_images"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:clickable="false"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    tools:layout_editor_absoluteX="8dp"
+                    tools:layout_editor_absoluteY="0dp">
+
+                    <!--<ImageView
+                        android:id="@+id/detail_imageThumbnail"
+                        android:background="@mipmap/loading_spinner"
+                        android:layout_width="@android:dimen/thumbnail_height"
+                        android:layout_height="@android:dimen/thumbnail_height" />-->
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="35dp"
+                    android:background="@mipmap/fragm_price" />
+
+                <TextView
+                    android:id="@+id/detail_tvPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="detail_tvPrice"
+                    android:textColor="@color/DarkRed"
+                    android:textSize="30sp" />
+            </LinearLayout>-->
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="top"
+                android:orientation="horizontal"
+                tools:layout_editor_absoluteX="8dp"
+                tools:layout_editor_absoluteY="0dp">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="top"
+                    android:background="@mipmap/fragm_description" />
+
+                <TextView
+
+                    android:id="@+id/detail_tvDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/Blue"
+                    android:textSize="19sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/background"
+    android:orientation="vertical"
+    android:weightSum="1"
+    tools:context="ru.narod.nod.catalogue.ViewControllers.MainViewController">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="20dp"
+            android:text="@string/simple_online_catalogue"
+            android:textColor="@color/Crimson"
+            android:textSize="26sp"
+            tools:layout_editor_absoluteX="85dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+        <LinearLayout
+            android:layout_margin="15dp"
+            android:weightSum="10"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:layout_weight="9"
+                android:id="@+id/etSearchCriteria"
+                android:layout_width="0dp"
+                android:layout_height="49dp"
+                android:layout_gravity="center_horizontal"
+                android:background="#eaffdd"
+                android:hint="@string/input_the_item_you_re_looking_for"
+                android:text="" />
+            <Button
+                android:background="@drawable/customborder"
+                android:layout_weight="1"
+                android:text="X"
+                android:id="@+id/btnClearEtSearchCriteria"
+                android:layout_width="0dp"
+                android:layout_height="49dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSearch"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/customborder"
+            android:fontFamily="sans-serif"
+
+            android:text="@string/search"
+            android:textColor="@color/DarkRed"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!--android:onClick="startParser"-->
+
+        <Button
+            android:id="@+id/btnLastVisited"
+            android:layout_width="151dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/customborder"
+            android:fontFamily="sans-serif"
+
+            android:text="@string/history"
+            android:textColor="@color/DarkRed"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+        <!--android:onClick="startHistory"-->
+
+        <LinearLayout
+            android:layout_width="368dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+
+                <LinearLayout
+                    android:id="@+id/actSearchLinLayoutMainView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <ProgressBar
+            android:indeterminateDrawable="@drawable/spinner_ring"
+            android:indeterminateOnly="true"
+            android:id="@+id/progress_bar"
+            android:visibility="invisible"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_weight="0.16">
+        </ProgressBar>
+    </LinearLayout>
+
+
+</FrameLayout>

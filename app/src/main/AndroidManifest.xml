@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ru.narod.nod.catalogue">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/mercado_logo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data android:name="net.hockeyapp.android.appIdentifier"
+            android:value="${HOCKEYAPP_APP_ID}" />
+        <meta-data
+            android:name="com.mercadolibre.android.sdk.ApplicationId"
+            android:value="@string/meli_app_id" />
+        <meta-data
+            android:name="com.mercadolibre.android.sdk.RedirectUrl"
+            android:value="@string/meli_redirect_uri" />
+
+        <activity android:name=".ViewControllers.MainViewController"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:screenOrientation="portrait"
+            android:name="com.mercadolibre.android.sdk.MercadoLibreActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize"
+            android:label="@string/app_name"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".ViewControllers.DetailItemController"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ViewControllers.SearchResultController"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ViewControllers.LastVisitedItemsController"
+            android:screenOrientation="portrait"/>
+    </application>
+
+</manifest>

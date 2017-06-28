@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <GridLayout
+        android:id="@+id/simple_item_view_grid_layout"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/customborder"
+        android:id="@+id/simple_item_view_grid_layout"
+        tools:context="ru.narod.nod.catalogue.ViewControllers.SimpleItemController">-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/customborder"
+            android:orientation="horizontal"
+            android:textAlignment="center"
+            android:weightSum="1">
+
+            <FrameLayout
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:background="@color/White"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="10dp" />
+
+                <ImageView
+                    android:id="@+id/simple_imageThumbnail"
+                    android:layout_width="110dp"
+                    android:layout_height="110dp"
+                    android:layout_margin="10dp" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="3dp"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/simple_tvTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="92dp"
+                    android:layout_gravity="center_vertical"
+                    android:autoLink="all"
+                    android:bufferType="spannable"
+                    android:drawablePadding="5px"
+                    android:fadingEdge="vertical"
+                    android:fadingEdgeLength="25px"
+                    android:foregroundGravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:isScrollContainer="true"
+                    android:linksClickable="true"
+                    android:maxLines="3"
+                    android:scrollbarStyle="outsideOverlay"
+                    android:scrollbars="vertical"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="italic" />
+
+
+                <TextView
+                    android:id="@+id/simple_tvPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_margin="4dp"
+                    android:foregroundGravity="bottom"
+                    android:gravity="bottom"
+                    android:text="simple_tvPrice"
+                    android:textAlignment="center"
+                    android:textColor="@color/DarkRed"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--This is an empty line under an item view-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/White"
+                android:textSize="10sp" />
+        </LinearLayout>
+
+    </GridLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ProgressBar
+            android:layout_margin="10dp"
+            android:indeterminateDrawable="@drawable/spinner_ring"
+            android:indeterminateOnly="true"
+            android:id="@+id/simple_progress_bar"
+            android:visibility="visible"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:indeterminate="true">
+        </ProgressBar>
+    </FrameLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/simple_no_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="@string/no_result_of_searching"
+            android:textSize="20sp"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+</FrameLayout>
